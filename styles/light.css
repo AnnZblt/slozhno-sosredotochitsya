@@ -1,27 +1,30 @@
 :root .theme_light {
   --main-font: 'IBM Plex mono';
   --bg-color: #fff1f7;
+  --bg-image: url('../images/cover-image-light.png');
   --title-color: #353430;
   --subtitle-color: #353430;
   --text-color: #353430;
   --accent-color: #ff8dcb;
   --heading-color: #ffc2e6;
   --heading-shadow: #ff0070;
-  --text-color-rgb: 53, 52, 48;
+  --hover-color-rgb:  53, 52, 48;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --main-font: 'IBM Plex mono';
     --bg-color: #fff1f7;
+    --bg-image: url('../images/cover-image-light.png');
     --title-color: #353430;
     --subtitle-color: #353430;
     --text-color: #353430;
     --accent-color: #ff8dcb;
     --heading-color: #ffc2e6;
     --heading-shadow: #ff0070;
-    --text-color-rgb: 53, 52, 48;
+    --hover-color-rgb:  53, 52, 48;
   }
+  
 
   .header__decoration {
     display: none;
@@ -35,7 +38,7 @@
 }
 
 .page.theme_light {
-  background-image: url('../images/cover-image-light.png');
+  background-image: var(--bg-image);
 }
 
 .theme_light .header__theme-menu-button:hover {

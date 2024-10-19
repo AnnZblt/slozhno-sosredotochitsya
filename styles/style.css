@@ -2,7 +2,7 @@
   font-family: var(--main-font), monospace;
   font-size: var(--font-size), 18px;
   background-color: var(--bg-color);
-  background-image: url('../images/cover-image-dark.png');
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -73,7 +73,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline-color: rgba(var(--title-color-rgb) , 0.4);
+  outline-color: rgba(var(--hover-color-rgb) , 0.4);
 }
 
 .header__theme-menu-button:focus {
@@ -343,6 +343,7 @@
 
   .title {
     transform: none;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
   
   .header__description {
