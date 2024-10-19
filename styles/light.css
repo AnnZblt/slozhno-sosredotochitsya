@@ -1,4 +1,4 @@
-:root.theme-light {
+:root .theme_light {
   --main-font: 'IBM Plex mono';
   --bg-color: #fff1f7;
   --title-color: #353430;
@@ -38,11 +38,11 @@
   background-image: url('../images/cover-image-light.png');
 }
 
-.header__theme-menu-button:hover {
+.theme_light .header__theme-menu-button:hover {
   outline-color: rgba(var(--text-color-rgb) , 0.4);
 }
 
-.header__decoration {
+.theme_light  .header__decoration {
   display: none;
 }
 

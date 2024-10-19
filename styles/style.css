@@ -1,9 +1,9 @@
 .page {
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   font-size: var(--font-size), 18px;
   background-color: var(--bg-color);
   background-image: url('../images/cover-image-dark.png');
-  background-position: top center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -12,7 +12,7 @@
 .footer {
   display: grid;
   padding: var(--page-indent);
-  max-block-size: 768px;
+  min-block-size: 768px;
   block-size: 100vh;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline-color: var(--text-color);
+  outline-color: rgba(var(--title-color-rgb) , 0.4);
 }
 
 .header__theme-menu-button:focus {
@@ -91,6 +91,7 @@
 
 .header__decoration {
   position: absolute;
+  display: block;
   inset-block-start: var(--page-indent);
   inset-inline-end: var(--page-indent);
 }
@@ -108,7 +109,7 @@
   content: '';
   position: absolute;
   border-radius: 100%;
-  box-shadow: 0 0 3px 3px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
   transform: translateY(-50%);
   inset-block-start: calc(50%);
@@ -154,7 +155,8 @@
   gap: var(--page-indent);
 }
 
-.two-columns-section {
+.reasons.section,
+.advice.section {
   grid-template-columns: calc(100% / 3 - 13px) 1fr;
 }
 
@@ -178,6 +180,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
+}
+
+.list-item__description:last-of-type {
+  margin-block-start: 10px;
 }
 
 .details-link {
@@ -282,7 +288,7 @@
 @media (max-width: 768px) {
   .header, 
   .footer {
-    max-block-size: 1024px;
+    min-block-size: 1024px;
   }
 
   .header__theme-menu {
@@ -299,7 +305,8 @@
     max-inline-size: 364px;
   }
 
-  .two-columns-section {
+  .reasons.section,
+  .advice.section {
     grid-template-columns: calc(100% / 3 - 6px) 1fr;
   }
 
@@ -331,7 +338,7 @@
   
   .header,
   .footer {
-    max-block-size: 668px;
+    min-block-size: 668px;
   }
 
   .title {
@@ -353,7 +360,8 @@
     padding-block-end: 25px;
   }
 
-  .two-columns-section {
+  .reasons.section,
+  .advice.section {
     grid-template-columns: 1fr;
   }
 
