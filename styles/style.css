@@ -89,7 +89,7 @@
   pointer-events: none;
 }
 
-.header__decoration  {
+.header__decoration {
   position: absolute;
   inset-block-start: var(--page-indent);
   inset-inline-end: var(--page-indent);

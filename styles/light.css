@@ -19,12 +19,18 @@
     --text-color: #353430;
     --accent-color: #ff8dcb;
     --heading-color: #ffc2e6;
-    --heading-shadow: #ff0070;  
+    --heading-shadow: #ff0070;
     --text-color-rgb: 53, 52, 48;
   }
 
   .header__decoration {
     display: none;
+  }
+
+  @media (max-width: 768px) {
+    .page {
+      --heading-shadow: #ff8dcb;
+    }
   }
 }
 
@@ -34,4 +40,14 @@
 
 .header__theme-menu-button:hover {
   outline-color: rgba(var(--text-color-rgb) , 0.4);
+}
+
+.header__decoration {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .page {
+    --heading-shadow: #ff8dcb;
+  }
 }
