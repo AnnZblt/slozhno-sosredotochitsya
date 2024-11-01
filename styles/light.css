@@ -24,10 +24,13 @@
     --heading-shadow: #ff0070;
     --hover-color-rgb:  53, 52, 48;
   }
-  
 
   .header__decoration {
     display: none;
+  }
+
+  .theme_dark .header__decoration {
+    display: block;
   }
 
   @media (max-width: 768px) {
@@ -45,12 +48,18 @@
   outline-color: rgba(var(--text-color-rgb) , 0.4);
 }
 
-.theme_light  .header__decoration {
+.theme_light .header__decoration {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .page {
+  .theme_light.page {
     --heading-shadow: #ff8dcb;
+  }
+}
+
+@media (max-width: 600px) {
+  .theme_light.page {
+    --page-indent: 10px;
   }
 }

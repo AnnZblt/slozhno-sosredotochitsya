@@ -16,3 +16,9 @@
 .page.theme_dark {
   background-image: var(--bg-image);
 }
+
+@media (max-width: 600px) {
+  .page.theme_dark {
+    --page-indent: 10px;
+  }
+}
